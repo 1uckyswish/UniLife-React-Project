@@ -7,14 +7,27 @@
   font-family: 'Epilogue', sans-serif;
 }
 
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+a{
+  text-decoration: none;
+}
+
 /**GLOBAL CSS**/
 
 :root{
   --White-Body: rgb(255, 255, 255);
   --Dark-Blue-Body: rgb(58, 82, 149);
+  --Baby-Blue-Body: rgb(0, 162, 225);
+  --Black-Body: rgb(0, 0, 0);
   --White-Text: rgb(255, 255, 255);
   --Black-Text: rgb(0, 0, 0);
   --Grey-Text: rgb(206, 211, 216);
   --Dark-Blue-Text: rgb(58, 82, 149);
-  --Baby-Blue: rgb(0, 162, 225);
 }

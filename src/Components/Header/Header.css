@@ -1,0 +1,40 @@
+.header-container{
+    background-color: var(--Baby-Blue-Body);
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    color: var( --White-Text);
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+
+.title-container h2{
+    padding: 12px 8px 0 8px;
+}
+
+.title-icon{
+    font-size: 2.8em;
+}
+
+.header-link-icons{
+    font-size: 2em;
+}
+
+.header-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-links p{
+    padding: 8px 10px 0 10px;
+    font-size: 16px;
+}
