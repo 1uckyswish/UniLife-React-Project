@@ -8,11 +8,7 @@
 }
 
 html,body{
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 a{
@@ -28,6 +24,7 @@ a{
   --Black-Body: rgb(0, 0, 0);
   --White-Text: rgb(255, 255, 255);
   --Black-Text: rgb(0, 0, 0);
-  --Grey-Text: rgb(206, 211, 216);
+  --Grey-Text: rgba(255, 255, 255, 0.6);;
   --Dark-Blue-Text: rgb(58, 82, 149);
+  --Email-Form-Text: #CED3D8;
 }
