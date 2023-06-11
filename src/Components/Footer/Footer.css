@@ -12,7 +12,6 @@
     height: 100vh;
     width: 100vw;
     justify-content: space-around;
-    border: 2px solid green;
 }
 
 .newsletter-container{
@@ -20,7 +19,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: var(--White-Text);
-    height: 45vh;
+    height: 44vh;
 }
 
 .newsletter-container h2{
@@ -80,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2%;
+    padding: 0 5%;
     font-size: 16px;
 }
 

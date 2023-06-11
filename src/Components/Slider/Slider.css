@@ -1,0 +1,29 @@
+.slider-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.slider-image{
+     filter: brightness(65%)blur(0.9px);
+     width: 100%;
+}
+
+.slider-header{
+    position: absolute;
+    color: var(--White-Text);
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+    text-align: center;
+}
+
+.slider-header h2{
+    font-size: 64px;
+}
+
+.slider-header p{
+    font-size: 24px;
+}
