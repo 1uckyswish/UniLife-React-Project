@@ -2,21 +2,21 @@
   display: flex;
   justify-content: center;
   position: relative;
+  height: auto;
 }
 
 .slider-image{
-     filter: brightness(65%)blur(0.9px);
+     filter: brightness(58%)blur(0.5px);
      width: 100%;
 }
 .slider-header {
   position: absolute;
   color: var(--White-Text);
-  top: 50px;
+  top: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: center;
-  width: 100%; /* Change this to 100% instead of auto */
+  width: 100%;
 }
 
 .slider-header h2 {
