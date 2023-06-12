@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Homepage.css';
 import axios from 'axios';
+import TopCities from '../../Components/TopCities/TopCities';
 
 function Homepage() {
   const citiesApiUrl1 = 'https://unilife-server.herokuapp.com/cities?page=1';
@@ -10,20 +11,20 @@ function Homepage() {
   useEffect(() => {
     axios.get(citiesApiUrl1)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         setCities((prevCities) => [...prevCities, ...result.data.response]);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [citiesApiUrl1]);
 
   useEffect(() => {
     axios.get(citiesApiUrl2)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         setCities((prevCities) => [...prevCities, ...result.data.response]);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [citiesApiUrl2]);
 
   return (
     <div className='homepage-container'>
@@ -42,10 +43,8 @@ function Homepage() {
     </div>
     <div className='top-cities-container'>
       <h1>Student Accommodations In our Top Cities</h1>
-
-
-
     </div>
+     <TopCities />
     </div>
   );
 }
