@@ -1,0 +1,13 @@
+.grid-photo-container {
+  width: 90%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.grid-photo-item{
+    align-items: center;
+}

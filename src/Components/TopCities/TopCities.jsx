@@ -1,25 +1,30 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './TopCities.css';
 import axios from 'axios';
+import TopCityCard from '../TopCityCard/TopCityCard';
+import "./TopCities.css"
 
 function TopCities() {
-    const topCitiesApiUrl = `https://unilife-server.herokuapp.com/cities`;
-    const [topNineCities, setTopNineCities] = useState([]);
+  const topCitiesApiUrl = `https://unilife-server.herokuapp.com/cities`;
+  const [topNineCities, setTopNineCities] = useState([]);
 
-    useEffect(
-        ()=>{
-            axios.get(topCitiesApiUrl)
-            .then((result)=>{
-                console.log("test ets", result.data.response);
-            })
-            .catch((error)=> console.log(error));
-        },[topCitiesApiUrl]
-    );
+  useEffect(() => {
+    axios
+      .get(topCitiesApiUrl)
+      .then((result) => {
+        console.log("test ets", result.data.response);
+        setTopNineCities(result.data.response.slice(0, 9)); // Remove the last item
+      })
+      .catch((error) => console.log(error));
+  }, [topCitiesApiUrl]);
+
   return (
-    <div>
-      <h1>Grid pic</h1>
+    <div className='grid-photo-container'>
+      {topNineCities.map((city) => (
+        <TopCityCard key={city?.id} topCity={city} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default TopCities
+export default TopCities;

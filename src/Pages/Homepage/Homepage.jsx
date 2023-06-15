@@ -43,8 +43,8 @@ function Homepage() {
     </div>
     <div className='top-cities-container'>
       <h1>Student Accommodations In our Top Cities</h1>
+      <TopCities />
     </div>
-     <TopCities />
     </div>
   );
 }
