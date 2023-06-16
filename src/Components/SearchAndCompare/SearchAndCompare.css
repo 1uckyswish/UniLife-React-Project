@@ -1,0 +1,39 @@
+.detail-icons-container{
+    background-color: #F6FAFD;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    height: 400px;
+    border-radius: 24px;
+}
+
+.detail-icons-container h2:first-child{
+    font-size: 36px;
+}
+
+.detail-info-container{
+    display: flex;
+    height: 190px;
+}
+
+.detail-icon-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.detail-icon-card h3{
+    font-size: 28px;
+}
+
+.detail-icon-card p{
+    font-size: 20px;
+}
+
+.detail-icon-card img{
+    width: 50px;
+}
