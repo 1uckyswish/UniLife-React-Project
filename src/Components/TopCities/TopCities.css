@@ -6,6 +6,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 50px 0;
+  border: 2px solid red;
 }
 
 .grid-photo-item{

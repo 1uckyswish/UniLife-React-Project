@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Homepage.css';
 import axios from 'axios';
 import TopCities from '../../Components/TopCities/TopCities';
+import SearchAndCompare from '../../Components/SearchAndCompare/SearchAndCompare';
 
 function Homepage() {
   const citiesApiUrl1 = 'https://unilife-server.herokuapp.com/cities?page=1';
@@ -45,6 +46,9 @@ function Homepage() {
       <h1>Student Accommodations In our Top Cities</h1>
       <TopCities />
     </div>
+      <div className='details-container'>
+        <SearchAndCompare />
+      </div>
     </div>
   );
 }
