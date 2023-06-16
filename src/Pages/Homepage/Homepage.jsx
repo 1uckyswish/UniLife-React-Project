@@ -3,6 +3,7 @@ import './Homepage.css';
 import axios from 'axios';
 import TopCities from '../../Components/TopCities/TopCities';
 import SearchAndCompare from '../../Components/SearchAndCompare/SearchAndCompare';
+import FavoriteAndSelection from '../../Components/FavoriteAndSelection/FavoriteAndSelection';
 
 function Homepage() {
   const citiesApiUrl1 = 'https://unilife-server.herokuapp.com/cities?page=1';
@@ -45,9 +46,13 @@ function Homepage() {
     <div className='top-cities-container'>
       <h1>Student Accommodations In our Top Cities</h1>
       <TopCities />
+      <button id='all-cities-button'>See All Cities</button>
     </div>
       <div className='details-container'>
         <SearchAndCompare />
+      </div>
+      <div className='favorite-container'>
+         <FavoriteAndSelection />
       </div>
     </div>
   );
