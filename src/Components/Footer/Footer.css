@@ -99,3 +99,8 @@
 .footer-copyright-container p{
     padding: 0 20px;
 }
+
+#success-message{
+    color: greenyellow;
+    font-size: 20px
+}
