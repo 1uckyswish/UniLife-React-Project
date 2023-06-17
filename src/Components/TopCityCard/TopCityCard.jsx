@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function TopCityCard({ topCity }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const cardStyle = {
     position: 'relative',
     width: '100%',
@@ -17,6 +19,8 @@ function TopCityCard({ topCity }) {
     width: '100%',
     height: '100%',
     filter: 'blur(0.8px) brightness(0.8)', // Adjust brightness to make the background slightly darker
+    transition: 'transform 0.3s', // Add transition for smooth effect
+    transform: isHovered ? 'scale(1.3)' : 'scale(1)', // Apply the zoom effect when hovered
   };
 
   const overlayStyle = {
@@ -49,7 +53,12 @@ function TopCityCard({ topCity }) {
   };
 
   return (
-    <div className="grid-photo-item" style={cardStyle}>
+    <div
+      className="grid-photo-item"
+      style={cardStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div style={imageStyle}></div>
       <div style={overlayStyle}></div>
       <div style={contentStyle}>
