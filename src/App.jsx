@@ -8,6 +8,8 @@ import CityDetails from "./Pages/CityDetails/CityDetails"
 import Data from "./utils/data.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RiseLoader from 'react-spinners/RiseLoader';
+import AllCitiesFetchProvider from "/src/Contexts/AllCitiesFetch"
+import HomeDetailPage from "/src/Pages/HomeDetailPage/HomeDetailPage"
 
 function App() {
   const [data1, data2, data3] = Data;
@@ -34,11 +36,14 @@ function App() {
     :
       <BrowserRouter>
     <Header />
+    <AllCitiesFetchProvider>
     <Routes>
       <Route path='/' element={<Homepage data={data1}/>} />
       <Route path='/SeeAllCities' element={<SeeAllCities data={data2}/>} />
+      <Route path='/HomeDetailPage/' element={<HomeDetailPage />} />
       <Route path='/CityDetails' element={<CityDetails data={data3} />} />
     </Routes>
+    </AllCitiesFetchProvider>
     <Footer />
  </BrowserRouter>
   }

@@ -1,31 +1,11 @@
-import {useEffect, useState} from 'react'
+import {useContext} from 'react'
 import "./SeeAllCities.css"
 import Slider from '../../Components/Slider/Slider'
-import axios from 'axios'
+import { AllCitiesFetch } from '../../Contexts/AllCitiesFetch'
+import { Link } from 'react-router-dom'
 function SeeAllCities({data}) {
-   const citiesApiUrl1 = 'https://unilife-server.herokuapp.com/cities?page=1';
-  const citiesApiUrl2 = 'https://unilife-server.herokuapp.com/cities?page=2';
-  const [cities, setCities] = useState([]);
 
-  useEffect(() => {
-    axios.get(citiesApiUrl1)
-      .then((result) => {
-        // console.log(result);
-        setCities((prevCities) => [...prevCities, ...result.data.response]);
-      })
-      .catch((error) => console.log(error));
-  }, [citiesApiUrl1]);
-
-  useEffect(() => {
-    axios.get(citiesApiUrl2)
-      .then((result) => {
-        // console.log(result);
-        setCities((prevCities) => [...prevCities, ...result.data.response]);
-      })
-      .catch((error) => console.log(error));
-  }, [citiesApiUrl2]);
-
-
+const { cities } = useContext(AllCitiesFetch)
 
   return (
     <>
@@ -34,7 +14,7 @@ function SeeAllCities({data}) {
       <h2>Search by City</h2>
       <div className='all-city-buttons'>
        {
-        cities.slice(0,24).map((city) => <button>{city.name}</button>)
+        cities.slice(0,24).map((city) => <Link to={`/HomeDetailPage?id=${city?._id}`}><button>{city?.name}</button></Link>)
        }
       </div>
     </div>
