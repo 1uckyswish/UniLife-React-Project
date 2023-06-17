@@ -34,7 +34,7 @@ function SeeAllCities({data}) {
       <h2>Search by City</h2>
       <div className='all-city-buttons'>
        {
-        cities.map((city) => <button>{city.name}</button>)
+        cities.slice(0,24).map((city) => <button>{city.name}</button>)
        }
       </div>
     </div>
