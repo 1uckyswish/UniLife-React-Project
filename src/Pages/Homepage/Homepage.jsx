@@ -4,8 +4,10 @@ import axios from 'axios';
 import TopCities from '../../Components/TopCities/TopCities';
 import SearchAndCompare from '../../Components/SearchAndCompare/SearchAndCompare';
 import FavoriteAndSelection from '../../Components/FavoriteAndSelection/FavoriteAndSelection';
+import { Link } from 'react-router-dom';
+import Slider from '../../Components/Slider/Slider';
 
-function Homepage() {
+function Homepage({data}) {
   const citiesApiUrl1 = 'https://unilife-server.herokuapp.com/cities?page=1';
   const citiesApiUrl2 = 'https://unilife-server.herokuapp.com/cities?page=2';
   const [cities, setCities] = useState([]);
@@ -29,7 +31,9 @@ function Homepage() {
   }, [citiesApiUrl2]);
 
   return (
-    <div className='homepage-container'>
+    <>
+      <Slider data={data}/>
+       <div className='homepage-container'>
     <div className='form-container'>
       <select name="Search by city" id="cities">
         <option value="Search by city">Search by city</option>
@@ -46,7 +50,7 @@ function Homepage() {
     <div className='top-cities-container'>
       <h1>Student Accommodations In our Top Cities</h1>
       <TopCities />
-      <button id='all-cities-button'>See All Cities</button>
+      <Link to="/SeeAllCities"><button id='all-cities-button'>See All Cities</button></Link>
     </div>
       <div className='details-container'>
         <SearchAndCompare />
@@ -55,6 +59,7 @@ function Homepage() {
          <FavoriteAndSelection />
       </div>
     </div>
+    </>
   );
 }
 

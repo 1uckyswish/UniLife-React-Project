@@ -1,0 +1,8 @@
+.all-cities-container{
+    /* border: 2px solid red; */
+}
+
+.all-city-buttons{
+    display: flex;
+    flex-direction: column;
+}

@@ -9,6 +9,10 @@
     padding: 0 3vw;
 }
 
+a{
+    color: var(--White-Text);
+}
+
 .title-container{
     display: flex;
     justify-content: space-between;

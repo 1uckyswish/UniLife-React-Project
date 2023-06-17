@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Homepage from './Pages/Homepage/Homepage';
-import Slider from './Components/Slider/Slider';
+import SeeAllCities from './Pages/SeeAllCities/SeeAllCities';
 import Data from "./utils/data.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RiseLoader from 'react-spinners/RiseLoader';
@@ -33,9 +33,9 @@ function App() {
     :
       <BrowserRouter>
     <Header />
-    <Slider data={data1} />
     <Routes>
-      <Route path='/' element={<Homepage />} />
+      <Route path='/' element={<Homepage data={data1}/>} />
+      <Route path='/SeeAllCities' element={<SeeAllCities data={data2}/>} />
     </Routes>
     <Footer />
  </BrowserRouter>
