@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Homepage from './Pages/Homepage/Homepage';
 import SeeAllCities from './Pages/SeeAllCities/SeeAllCities';
+import CityDetails from "./Pages/CityDetails/CityDetails"
 import Data from "./utils/data.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RiseLoader from 'react-spinners/RiseLoader';
@@ -36,6 +37,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Homepage data={data1}/>} />
       <Route path='/SeeAllCities' element={<SeeAllCities data={data2}/>} />
+      <Route path='/CityDetails' element={<CityDetails data={data3} />} />
     </Routes>
     <Footer />
  </BrowserRouter>
