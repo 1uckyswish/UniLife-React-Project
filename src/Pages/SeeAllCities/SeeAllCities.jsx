@@ -7,6 +7,7 @@ function SeeAllCities({data}) {
 
 const { cities } = useContext(AllCitiesFetch)
 
+
   return (
     <>
     <Slider data={data}/>
