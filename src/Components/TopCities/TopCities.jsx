@@ -12,8 +12,8 @@ function TopCities() {
     axios
       .get(topCitiesApiUrl)
       .then((result) => {
-        console.log("test ets", result.data.response);
-        setTopNineCities(result.data.response.slice(0, 9)); // Remove the last item
+        console.log("test ets", result?.data?.response);
+        setTopNineCities(result?.data?.response.slice(0, 9)); // Remove the last item
       })
       .catch((error) => console.log(error));
   }, [topCitiesApiUrl]);

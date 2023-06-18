@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react';
+import {useContext} from 'react';
 import './Homepage.css';
 import TopCities from '../../Components/TopCities/TopCities';
 import SearchAndCompare from '../../Components/SearchAndCompare/SearchAndCompare';
@@ -9,7 +9,6 @@ import { AllCitiesFetch } from "/src/Contexts/AllCitiesFetch"
 
 function Homepage({data}) {
   const { cities } = useContext(AllCitiesFetch);
-  const [cityValue, setCityValue] = useState(0)
 
   return (
     <>
@@ -20,8 +19,8 @@ function Homepage({data}) {
         <option value="Search by city">Search by city</option>
         {
           cities.map((item) => (
-            <option key={item.id} value={item.name}>
-              {item.name}
+            <option key={item?.id} value={item?.name}>
+              {item?.name}
             </option>
           ))
         }

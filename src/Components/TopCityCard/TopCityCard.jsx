@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function TopCityCard({ topCity }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -12,7 +12,7 @@ function TopCityCard({ topCity }) {
   };
 
   const imageStyle = {
-    backgroundImage: `url(${topCity.image_url})`,
+    backgroundImage: `url(${topCity?.image_url})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -62,8 +62,8 @@ function TopCityCard({ topCity }) {
       <div style={imageStyle}></div>
       <div style={overlayStyle}></div>
       <div style={contentStyle}>
-        <h2 style={headerStyle}>{topCity.name}</h2>
-        <p style={paragraphStyle}>{topCity.property_count} Properties</p>
+        <h2 style={headerStyle}>{topCity?.name}</h2>
+        <p style={paragraphStyle}>{topCity?.property_count} Properties</p>
       </div>
     </div>
   );

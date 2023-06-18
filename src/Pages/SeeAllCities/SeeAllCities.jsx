@@ -3,7 +3,7 @@ import "./SeeAllCities.css"
 import Slider from '../../Components/Slider/Slider'
 import { AllCitiesFetch } from '../../Contexts/AllCitiesFetch'
 import { Link } from 'react-router-dom'
-function SeeAllCities({data}) {
+function SeeAllCities({ data }) {
 
 const { cities } = useContext(AllCitiesFetch)
 
@@ -15,7 +15,7 @@ const { cities } = useContext(AllCitiesFetch)
       <h2>Search by City</h2>
       <div className='all-city-buttons'>
        {
-        cities.slice(0,24).map((city) => <Link to={`/HomeDetailPage?id=${city?._id}`}><button>{city?.name}</button></Link>)
+        cities.slice(0,24).map((city) => <Link to={`/HomeDetailPage?id=${city?._id}`} key={city?.id}><button>{city?.name}</button></Link>)
        }
       </div>
     </div>

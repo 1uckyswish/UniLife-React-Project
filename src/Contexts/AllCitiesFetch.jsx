@@ -10,7 +10,7 @@ export default function AllCitiesFetchProvider(props) {
   useEffect(() => {
     axios.get(citiesApiUrl1)
       .then((result) => {
-        setCities(result.data.response);
+        setCities(result?.data?.response);
       })
       .catch((error) => console.log(error));
   }, []); // Empty dependency array
