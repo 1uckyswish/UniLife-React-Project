@@ -15,11 +15,13 @@
 }
 
 .all-city-buttons{
-   width: 85%;
+  /* width: 100%; */
+  /* width:90%; */
   height: 95vh;
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  gap:10px
 }
 
 .all-city-buttons button{
