@@ -21,7 +21,7 @@ function TopCities() {
   return (
     <div className='grid-photo-container'>
       {topNineCities.map((city) => (
-        <TopCityCard key={city?.id} topCity={city} />
+        <TopCityCard topCity={city} />
       ))}
     </div>
   );

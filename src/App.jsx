@@ -40,8 +40,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Homepage data={data1}/>} />
       <Route path='/SeeAllCities' element={<SeeAllCities data={data2}/>} />
+      <Route path='/CityDetails/:homeid' element={<CityDetails data={data3} />} />
       <Route path='/HomeDetailPage/' element={<HomeDetailPage />} />
-      <Route path='/CityDetails' element={<CityDetails data={data3} />} />
     </Routes>
     </AllCitiesFetchProvider>
     <Footer />

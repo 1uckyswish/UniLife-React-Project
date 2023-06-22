@@ -15,7 +15,7 @@ const { cities } = useContext(AllCitiesFetch)
       <h2>Search by City</h2>
       <div className='all-city-buttons' key={cities?.id}>
        {
-        cities.slice(0,24).map((city) => <Link to={`/HomeDetailPage?id=${city?._id}`} key={city?.id}><button>{city?.name}</button></Link>)
+        cities.slice(0,24).map((city) => <Link to={`/CityDetails/${city?._id}`} key={city?.id}><button>{city?.name}</button></Link>)
        }
       </div>
     </div>

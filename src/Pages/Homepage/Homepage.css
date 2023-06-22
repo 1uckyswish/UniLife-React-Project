@@ -38,6 +38,22 @@
     border: none;
     cursor: pointer;
     font-size: 20px;
+    cursor: not-allowed;
+}
+
+.form-container a{
+    width: 30%;
+    height: 36%;
+    background-color: var(--Dark-Blue-Body);
+    border-radius: 12px;
+    color: var(--White-Text);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-cities-container{

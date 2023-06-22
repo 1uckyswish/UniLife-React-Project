@@ -5,7 +5,7 @@ function HomeDetailPage() {
     
   return (
     <div className='home-details-container'>
-      <h1>CITY DETAILS PAGE!</h1>
+      <h1>Homepage detail</h1>
     </div>
   )
 }
