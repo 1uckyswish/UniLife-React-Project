@@ -1,17 +1,17 @@
 .city-details-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     position: relative;
-    border: 2px solid red;
+    /* border: 3px solid purple; */
     min-height: 100vh;
+    /* height: 1500px; */
 }
 
 .filter-form-container{
-    width: 1279px;
+    width: auto;
     height: 176px;
-    flex-shrink: 0;
     border-radius: 24px;
     background-color: var(--White-Body);
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
@@ -46,11 +46,42 @@
     margin: 0 8px 0 0;
     width: 252px;
     height: 48px;
-    flex-shrink: 0;
     border-radius: 12px;
     border: 1px solid #CED3D8;
     background-color: #FFF;
     padding-left: 10px;
     color: #CED3D8;
     font-size: 20px;
+}
+
+.property-card-container{
+    margin: 150px auto 0 auto;
+    /* border: 2px solid green; */
+    height: auto;
+    display: flex;
+    width: 92%;
+    flex-direction: column;
+}
+
+.property-card-container-title{
+    display: flex;
+    padding-left: 15px;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 10px 0 20px 0;
+
+}
+
+.property-card-container-title span{
+    color: var(--Baby-Blue-Body);
+}
+
+.property-card-grid{
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  /* border: 2px solid red; */
 }

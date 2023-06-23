@@ -3,11 +3,12 @@ import "./CityDetails.css"
 import Slider from '../../Components/Slider/Slider'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import PropertyCard from '../../Components/PropertyCard/PropertyCard';
 
 function CityDetails({data}) {
   const { homeid } = useParams();
   const [singleCity, setSingleData] = useState([]);
-  
+
   useEffect(
     ()=>{
       axios.get(`https://unilife-server.herokuapp.com/properties/city/${homeid}`)
@@ -32,32 +33,48 @@ function CityDetails({data}) {
         <div className="filter-form-inputs">
           <select name="" id="">
             <option value="">Any Bedroom</option>
-            {/* {
+            {
               singleCity.map((city)=>{
                 return <option>{city?.bedroom_count}</option>
               })
-            } */}
+            }
           </select>
           <select name="" id="">
             <option value="">Any bathroom</option>
-            {/* <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option> */}
+             {
+              singleCity.map((city)=>{
+                return <option>{city?.bathroom_count}</option>
+              })
+            }
           </select>
           <select name="" id="">
             <option value="">Any price</option>
-            {/* <option value="">1000</option>
-            <option value="">1500</option>
-            <option value="">2000</option>
-            <option value="">2500</option>
-            <option value="">3000</option> */}
+               {
+              singleCity.map((city)=>{
+                return <option>{city?.rent}</option>
+              })
+            }
           </select>
           <select name="" id="">
-            <option value="">Home Type</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="">Any price</option>
+               {
+              singleCity.map((city)=>{
+                return <option>{city?.property_type}</option>
+              })
+            }
           </select>
+        </div>
+      </div>
+      <div className="property-card-container">
+        <div className="property-card-container-title">
+            <p>{singleCity.length} Homes in <span>{singleCity[0]?.address?.city}</span></p>
+        </div>
+        <div className="property-card-grid">
+            {
+              singleCity.map((card)=>{
+                return <PropertyCard card={card}/>
+              })
+            }
         </div>
       </div>
     </div>
