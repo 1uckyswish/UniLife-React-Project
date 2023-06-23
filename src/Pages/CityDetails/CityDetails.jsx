@@ -67,7 +67,7 @@ function CityDetails({data}) {
       </div>
       <div className="property-card-container">
         <div className="property-card-container-title">
-            <p>{singleCity.length} Homes in <span>{singleCity[0]?.address?.city}</span></p>
+            <h5>{singleCity.length} Homes in <span>{singleCity[0]?.address?.city}</span></h5>
         </div>
         <div className="property-card-grid">
             {

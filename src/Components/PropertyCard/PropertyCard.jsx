@@ -6,9 +6,7 @@ import Shower from "/src/assets/shower-icon.png";
 function PropertyCard({card}) {
   return (
     <div className='single-property-card'>
-        <div className="property-img-container">
-            <img src={card?.images[3]} />
-        </div>
+          <img src={card?.images[0]} />
         <div className='property-info-container'>
             <div className='property-info'>
                <p>${card?.rent}</p>
