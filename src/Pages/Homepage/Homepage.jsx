@@ -31,13 +31,12 @@ function Homepage({data}) {
           ))
         }
       </select>
-      {optionId !== '' ?
-          <Link to={`/CityDetails/${optionId}`}>Find Homes</Link>
-         :
-          <button type="submit" form="cities">
-            Find Homes
-          </button>
-        }
+      {
+        optionId !== '' ?
+        <Link to={`/CityDetails/${optionId}`}>Find Homes</Link>
+        :
+        <button type="submit" form="cities">Find Homes</button>
+      }
     </div>
     <div className='top-cities-container'>
       <h1>Student Accommodations In our Top Cities</h1>
