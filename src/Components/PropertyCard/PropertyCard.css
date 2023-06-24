@@ -8,31 +8,110 @@
     border-radius: 24px;
 }
 
+
 .single-property-card img{
     width: 100%;
     border-radius: 24px 24px 0 0;
 }
 
+.single-property-card button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--White-Body);
+  border: none;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.single-property-card a{
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  background-color: var(--White-Body);
+  border: none;
+  border-top: 1px solid #CED3D8;
+  /* border-bottom: 1px solid #CED3D8; */
+  border-radius: 0 0 24px 24px;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.single-property-card button p{
+    padding-left: 10px;
+}
+
 .property-info-container{
     background-color: var(--Dark-Blue-Body);
-    width: auto; 
+    width: auto;
+    height: 80px;
     display: flex;
     flex-direction: column;
     color: white;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    justify-content: center;
+    padding: 0 20px;
+
+}
+
+.property-info-container p:first-child{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#price-sub-text{
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 .property-info{
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
     align-items: center;
-    border: 2px solid green;
 }
 
 .property-icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-     border: 2px solid rgb(109, 0, 128);
+    width: 130px;
 }
+
+.property-icons p{
+    font-size: 16px; 
+}
+
+.property-icons svg{
+    font-size: 1.5em;
+}
+
+.property-detailed-info-container{
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    padding: 0 15px;
+}
+
+.property-type-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.property-address{
+    display: flex;
+    align-items: center;
+}
+
+.property-address svg{
+    font-size: 1em;
+    color: var(--Dark-Blue-Body);
+}
+
+.property-address p{
+    font-size: 14px;
+    padding: 0 10px;
+}
+
