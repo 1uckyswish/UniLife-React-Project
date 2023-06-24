@@ -75,6 +75,11 @@
     cursor: pointer;
 }
 
+#all-cities-button:hover{
+    background-color: var(--Baby-Blue-Body);
+    color: var(--White-Text);
+}
+
 .top-cities-container h1{
     font-weight: bold;
     font-size: 36px;
