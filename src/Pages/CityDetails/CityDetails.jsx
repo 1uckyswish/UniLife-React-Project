@@ -9,22 +9,27 @@ import CityInformation from '../../Components/CityInformation/CityInformation';
 function CityDetails({ data }) {
   const { homeid } = useParams();
   const [singleCity, setSingleData] = useState([]);
+  const [cityPrices, setCityPrices] = useState([])
+  const numArray = [1,2,3,4,5,6]
+  const homes = ["Apartment","Detached","Semi-Detached"]
 
   useEffect(() => {
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${homeid}`)
       .then((result) => {
         console.log(result.data.response);
         setSingleData(result.data.response);
+        setCityPrices(result.data.response.map(city => city.rent));
       })
       .catch((error) => console.log(error));
   }, []);
 
-  const filterProperties = (bedroom, bathroom, price) => {
+  const filterProperties = (bedroom, bathroom, price, type) => {
     const query = {
       city_id: homeid,
       bedroom_count: bedroom,
       bathroom_count: bathroom,
-      rent: price
+      rent: price,
+      property_type: type
     };
 
     axios.post('https://unilife-server.herokuapp.com/properties/filter',{ query })
@@ -47,35 +52,33 @@ function CityDetails({ data }) {
             <p>Home Type</p>
           </div>
           <div className="filter-form-inputs">
-            <select name="" id="" onChange={(e) => filterProperties(e.target.value, '', '')}>
+            <select name="" id="" onChange={(e) => filterProperties(e.target.value, '', '', '')}>
               <option value="">Any Bedroom</option>
               {
-                singleCity.map((city) => (
-                  <option value={city?.bedroom_count}>{city?.bedroom_count}</option>
+                numArray.map((number) => (
+                  <option value={number}>{number}</option>
                 ))
               }
             </select>
-            <select name="" id="" onChange={(e) => filterProperties('', e.target.value, '')}>
+            <select name="" id="" onChange={(e) => filterProperties('', e.target.value, '', '')}>
               <option value="">Any Bathroom</option>
-              {
-                singleCity.map((city) => (
-                  <option value={city?.bathroom_count}>{city?.bathroom_count}</option>
-                ))
-              }
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
             </select>
-            <select name="" id="" onChange={(e) => filterProperties('', '', e.target.value)}>
+            <select name="" id="" onChange={(e) => filterProperties('', '', e.target.value, '')}>
               <option value="">Any Price</option>
               {
-                singleCity.map((city) => (
-                  <option value={city?.rent}>{city?.rent}</option>
+                cityPrices.sort((a, b) => b - a).map((city) => (
+                  <option key={city} value={city}>{city}</option>
                 ))
               }
             </select>
-            <select name="" id="">
-              <option value="">Any price</option>
+            <select name="" id="" onChange={(e) => filterProperties('', '', '', e.target.value)}>
+              <option value="">Any Type</option>
               {
-                singleCity.map((city) => (
-                  <option>{city?.property_type}</option>
+                homes.map((type) => (
+                  <option>{type}</option>
                 ))
               }
             </select>
