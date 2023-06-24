@@ -1,6 +1,23 @@
 .home-details-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;
-    align-items: center;
+    /* flex-direction: column; */
+    border: 2px solid red;
+}
+
+.home-details-left-column{
+    border: 2px solid red;
+    display: flex;
+    width: 500px;
+}
+
+.home-details-left-column img{
+    width: 100%;
+}
+
+.home-details-right-column{
+    border: 2px solid red;
+    display: flex;
+    width: 500px;
 }
