@@ -11,6 +11,7 @@ import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import BookingModal from '../../Components/BookingModal/BookingModal';
 
 function HomeDetailPage() {
   const { propertyid } = useParams();
@@ -18,6 +19,9 @@ function HomeDetailPage() {
   const [imageIndex, setImageIndex] = useState(0)
   const [bookingModal, setBookingModal] = useState(false);
 
+  function eventHandle(){
+    setBookingModal(!bookingModal)
+  };
 
   const customStyles = {
   content: {
@@ -27,7 +31,11 @@ function HomeDetailPage() {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    borderRadius: "24px",
   },
+    overlay:{
+      backgroundColor: "rgba(0,0,0,0.6)"
+    }
 };
 
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
@@ -137,22 +145,13 @@ function HomeDetailPage() {
             </div>
              <div className="detail-info-buttons">
                 <button><FontAwesomeIcon icon={faHeart} /> Shortlist</button>
-                <button onClick={()=>setBookingModal(true)}>Book Viewing</button>
+                <button onClick={eventHandle}>Book Viewing</button>
                 <Modal
                   isOpen={bookingModal}
-                  onRequestClose={()=>setBookingModal(false)}
+                  onRequestClose={eventHandle}
                   style={customStyles}
                   contentLabel="Booking Modal">
-                  <h2>Hello</h2>
-                  <button onClick={()=>setBookingModal(!bookingModal)}>close</button>
-                  <div>I am a modal</div>
-                  <form>
-                    <input />
-                    <button>tab navigation</button>
-                    <button>stays</button>
-                    <button>inside</button>
-                    <button>the modal</button>
-                  </form>
+                  <BookingModal eventHandle={eventHandle} homeData={homeData}/>
                 </Modal>
             </div>
             <div className="bedroom-prices-container">

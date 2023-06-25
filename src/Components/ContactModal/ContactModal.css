@@ -1,10 +1,11 @@
 /*! header css */
 
 .contact-container{
-    width: 650px;
+    width: 750px;
     height: 545px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -12,13 +13,14 @@
 .contact-container p:nth-child(2){
     font-weight: 400;
     font-size: 20px;
+    padding: 0 30px;
 }
 
 .contact-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 0 30px;
 }
 
 .contact-header h2{
@@ -33,9 +35,9 @@
 
 .contact-form-container{
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    height: 70%;
+    justify-content: space-evenly;
+    /* margin-top: 20px; */
+    height: auto;
 }
 
 .contact-form-container input{
@@ -73,7 +75,7 @@
 
 .form-container-2{
     margin-top: 30px;
-    width: 50%;
+    width: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -91,6 +93,7 @@
     font-weight: 400;
     font-size: 20px;
     padding: 10px 0 0 10px;
+     resize: none;
 }
 
 .form-container-2 textarea::placeholder{
