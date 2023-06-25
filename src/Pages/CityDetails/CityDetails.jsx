@@ -91,7 +91,7 @@ function CityDetails({ data }) {
           <div className="property-card-grid">
             {
               singleCity.map((card) => (
-                <PropertyCard card={card}/>
+                <PropertyCard card={card} homeid={homeid}/>
               ))
             }
           </div>

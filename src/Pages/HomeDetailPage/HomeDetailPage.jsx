@@ -4,6 +4,12 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBath } from '@fortawesome/free-solid-svg-icons';
+import { faBed } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { Link } from 'react-router-dom';
 
 function HomeDetailPage() {
   const { propertyid } = useParams();
@@ -24,10 +30,10 @@ function HomeDetailPage() {
 
   return (
     <div className="home-detail-container">
-      <div id="take-back-link">
+      <Link to={`/CityDetails/${propertyid}`} id="take-back-link">
         <FontAwesomeIcon icon={faCircleArrowLeft} />
         <p>Back to Search</p>
-      </div>
+      </Link>
       <div className="detail-containers">
         <div className="left-detail-container">
           <div className="detail-image-container">
@@ -49,9 +55,97 @@ function HomeDetailPage() {
               </div>
             </div>
           </div>
+          <div className="description-container">
+            <h2>Description</h2>
+            <p>{homeData?.property_description}</p>
+          </div>
+          <div className="key-features-container">
+            <h2>Key Features</h2>
+            <div className="list-features">
+              <p><FontAwesomeIcon icon={faCheckCircle} />Great Size Period Property</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />Four / Five Bedrooms</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />Two Reception Rooms</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />OpenPlan Dining Kitchen</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />Two Bath/Shower Rooms & Two WC's</p>
+            </div>
+          </div>
         </div>
         <div className="right-detail-container">
-          <p>right</p>
+          <div className="home-detail-card">
+            <div className="detail-info-section">
+               <span>{homeData?.address?.street}, {homeData?.address?.city}, {homeData?.address?.postcode}</span>
+               <div id='single-line'></div>
+               <div className="detail-info-icons">
+                  <div className="detail-icon-row-one">
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                       <p>Bedrooms</p>
+                      </div>
+                      <p><FontAwesomeIcon icon={faBed}/><span>{homeData?.bedroom_count}</span></p>
+                      </div>
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                        <p>Bathrooms</p>
+                      </div>
+                       <p><FontAwesomeIcon icon={faBath}/><span>{homeData?.bathroom_count}</span></p>
+                      </div>
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                        <p>Property Type</p>
+                      </div>
+                       <p id='special-font'>{homeData?.property_type}</p>
+                      </div>
+                  </div>
+                  <div className="detail-icon-row-two">
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                       <p>Price</p>
+                      </div>
+                       <p><FontAwesomeIcon icon={faDollarSign}/><span>{homeData?.rent}</span></p>
+                      </div>
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                        <p>Furnished type</p>
+                      </div>
+                     <p id='special-font'>{homeData?.furnished}</p>
+                      </div>
+                    <div className="detail-icon-boxes">
+                      <div className="detail-icon-box-title">
+                        <p>Available from</p>
+                      </div>
+                      <p id='special-font'>{homeData?.createdAt?.slice(0,10)}</p>
+                      </div>
+                  </div>
+               </div>
+            </div>
+             <div className="detail-info-buttons">
+                <button><FontAwesomeIcon icon={faHeart} /> Shortlist</button>
+                <button>Book Viewing</button>
+            </div>
+            <div className="bedroom-prices-container">
+              <div className="bedroom-container-title">
+                <p>Bedroom Prices</p>
+              </div>
+              <div className="bedroom-row-chart">
+                <div className="bedroom-single-row">
+                  <p>Bedroom 1</p>
+                  <p>{homeData?.bedroom_prices?.bedroom_one} Per Week</p>
+                </div>
+                <div className="bedroom-single-row">
+                  <p>Bedroom 2</p>
+                  <p>{homeData?.bedroom_prices?.bedroom_two} Per Week</p>
+                </div>
+                <div className="bedroom-single-row">
+                  <p>Bedroom 3</p>
+                  <p>{homeData?.bedroom_prices?.bedroom_three} Per Week</p>
+                </div>
+                <div className="bedroom-single-row">
+                  <p>Bedroom 4</p>
+                  <p>{homeData?.bedroom_prices?.bedroom_four} Per Week</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

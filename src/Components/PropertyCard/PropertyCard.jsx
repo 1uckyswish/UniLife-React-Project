@@ -8,7 +8,7 @@ import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 
-function PropertyCard({card}) {
+function PropertyCard({card, homeid}) {
   return (
     <div className='single-property-card'>
           <img src={card?.images[0]} />
@@ -34,7 +34,7 @@ function PropertyCard({card}) {
             <p>{card?.address.street}, {card?.address.city}, {card?.address.postcode}</p>
           </div>
         </div>
-         <Link to={`/HomeDetailPage/${card?._id}`}>
+         <Link to={`/HomeDetailPage/${card?._id}/${homeid}`}>
            <button>
           <FontAwesomeIcon icon={faHouseChimney} />
           <p>View Home</p>
