@@ -10,11 +10,28 @@ import { faBed } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 function HomeDetailPage() {
   const { propertyid } = useParams();
   const [homeData, setHomeData] = useState([]);
   const [imageIndex, setImageIndex] = useState(0)
+  const [bookingModal, setBookingModal] = useState(false);
+
+
+  const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+  // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+  Modal.setAppElement(document.getElementById('root'));
 
 
 
@@ -120,7 +137,23 @@ function HomeDetailPage() {
             </div>
              <div className="detail-info-buttons">
                 <button><FontAwesomeIcon icon={faHeart} /> Shortlist</button>
-                <button>Book Viewing</button>
+                <button onClick={()=>setBookingModal(true)}>Book Viewing</button>
+                <Modal
+                  isOpen={bookingModal}
+                  onRequestClose={()=>setBookingModal(false)}
+                  style={customStyles}
+                  contentLabel="Booking Modal">
+                  <h2>Hello</h2>
+                  <button onClick={()=>setBookingModal(!bookingModal)}>close</button>
+                  <div>I am a modal</div>
+                  <form>
+                    <input />
+                    <button>tab navigation</button>
+                    <button>stays</button>
+                    <button>inside</button>
+                    <button>the modal</button>
+                  </form>
+                </Modal>
             </div>
             <div className="bedroom-prices-container">
               <div className="bedroom-container-title">

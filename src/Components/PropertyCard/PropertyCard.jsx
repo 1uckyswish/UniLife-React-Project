@@ -34,7 +34,7 @@ function PropertyCard({card, homeid}) {
             <p>{card?.address.street}, {card?.address.city}, {card?.address.postcode}</p>
           </div>
         </div>
-         <Link to={`/HomeDetailPage/${card?._id}/${homeid}`}>
+         <Link to={`/HomeDetailPage/${card?._id}`}>
            <button>
           <FontAwesomeIcon icon={faHouseChimney} />
           <p>View Home</p>
