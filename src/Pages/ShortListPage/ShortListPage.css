@@ -1,0 +1,27 @@
+.short-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 5%;
+}
+
+#error-header {
+  text-align: center;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: salmon;
+}
+
+.shortlist-grid {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex-wrap: wrap;
+}

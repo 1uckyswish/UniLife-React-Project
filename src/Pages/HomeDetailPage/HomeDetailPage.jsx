@@ -14,7 +14,7 @@ import Modal from 'react-modal';
 import BookingModal from '../../Components/BookingModal/BookingModal';
 
 function HomeDetailPage() {
-  const { propertyid } = useParams();
+  const { propertyid, homeid } = useParams();
   const [homeData, setHomeData] = useState([]);
   const [imageIndex, setImageIndex] = useState(0)
   const [bookingModal, setBookingModal] = useState(false);
@@ -55,7 +55,7 @@ function HomeDetailPage() {
 
   return (
     <div className="home-detail-container">
-      <Link to={`/CityDetails/${propertyid}`} id="take-back-link">
+      <Link to={`/CityDetails/${homeData?.city_id?._id}`} id="take-back-link">
         <FontAwesomeIcon icon={faCircleArrowLeft} />
         <p>Back to Search</p>
       </Link>

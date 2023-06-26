@@ -100,14 +100,21 @@
     justify-content: space-between;
 }
 
-.property-address{
+.property-address-container{
     display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.property-address{
+     display: flex;
     align-items: center;
 }
 
 .property-address svg{
     font-size: 1em;
-    color: var(--Dark-Blue-Body);
+    color: var(--Baby-Blue-Body);
 }
 
 .property-address p{
@@ -115,3 +122,12 @@
     padding: 0 10px;
 }
 
+#shortlist-icon{
+    color: var(--Baby-Blue-Body);
+    cursor: pointer;
+}
+
+#hearted-icon{
+    color: red;
+     cursor: pointer;
+}

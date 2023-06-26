@@ -39,7 +39,9 @@ function Header() {
       </Link>
       <div className="header-links">
         <AiOutlineHeart className="header-link-icons" />
+        <Link to="/ShortList">
         <p>Shortlist</p>
+        </Link>
         <AiOutlineMail className="header-link-icons" />
         <p onClick={handleModal}>Contact Us</p>
       </div>
