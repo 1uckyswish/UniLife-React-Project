@@ -8,7 +8,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faBath } from '@fortawesome/free-solid-svg-icons';
 import { faBed } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import BookingModal from '../../Components/BookingModal/BookingModal';
@@ -21,6 +21,7 @@ function HomeDetailPage() {
   const [imageIndex, setImageIndex] = useState(0)
   const [bookingModal, setBookingModal] = useState(false);
   const { favorites, addHome, removeHome } = useContext(ShortList);
+  const isFavorite = favorites.find(item => item?._id === homeData?._id);
 
 
   function eventHandle(){
@@ -148,21 +149,14 @@ function HomeDetailPage() {
                </div>
             </div>
              <div className="detail-info-buttons">
-            <button onClick={() => {
-                  const isFavorite = favorites.find(item => item?._id === homeData?._id);
-                  if (isFavorite) {
-                    removeHome(homeData?._id);
-                  } else {
-                    addHome(homeData);
-                  }
-                }}>
-                  {favorites.find(item => item?._id === homeData?._id) ? (
-                    <FontAwesomeIcon icon={faHeart} className="fav-home" />
-                  ) : (
-                    <FontAwesomeIcon icon={faHeart} />
-                  )}
-                  Shortlist
-                </button>
+            <button onClick={isFavorite ? () => removeHome(homeData?._id) : () => addHome(homeData)}>
+                      {
+                        isFavorite ?
+                        <p><FontAwesomeIcon icon={faHeart} className="fav-home" /> Added To ShortList</p>
+                        :
+                         <p><FontAwesomeIcon icon={faHeart} /> Add To ShortList</p>
+                      }
+                    </button>
                 <button onClick={eventHandle}>Book Viewing</button>
                 <Modal
                   isOpen={bookingModal}
