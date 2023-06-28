@@ -13,9 +13,9 @@ function ContactModal({eventHandle}) {
             <div className='contact-form-container'>
               <div className='form-container-1'>
                 <p>Name</p>
-                <input type="text" placeholder='Enter Your Name'/>
+                <input type="text" placeholder='Enter Your Name' required/>
                 <p>Phone Number</p>
-                <input type="tel" placeholder='(248) 434-5508'/>
+                <input type="tel" placeholder='(248) 434-5508'required/>
                 <p>Are you a...</p>
                 <select>
                    <option value="option1">Student</option>
@@ -27,10 +27,10 @@ function ContactModal({eventHandle}) {
               </div>
               <div className='form-container-2'>
                 <p>Email</p>
-                <input type="text" placeholder='Enter Your Email Address'/>
+                <input type="text" placeholder='Enter Your Email Address' required/>
                 <p>Message</p>
-                <textarea placeholder='Enter Your Message'/>
-                <button onClick={eventHandle}>Submit</button>
+                <textarea placeholder='Enter Your Message' required/>
+                <button onClick={eventHandle} type="submit">Submit</button>
               </div>
             </div>
           </div>

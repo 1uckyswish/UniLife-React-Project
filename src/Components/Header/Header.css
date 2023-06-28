@@ -44,3 +44,22 @@ a{
     cursor: pointer;
 }
 
+/* media queries */
+
+/* tablet css  */
+@media screen and (max-width: 918px){
+
+
+
+
+
+
+}
+
+/* Mobile Css */
+@media screen and (max-width: 600px){
+.header-links{
+   display: none;
+}
+}
+
