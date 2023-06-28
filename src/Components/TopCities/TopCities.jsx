@@ -20,10 +20,10 @@ function TopCities() {
 
   return (
     <div className='grid-photo-container'>
-      {topNineCities.map((city) => (
-        <TopCityCard topCity={city} />
-      ))}
-    </div>
+    {topNineCities.map((city) => (
+      <TopCityCard key={city?._id} topCity={city} />
+    ))}
+  </div>
   );
 }
 

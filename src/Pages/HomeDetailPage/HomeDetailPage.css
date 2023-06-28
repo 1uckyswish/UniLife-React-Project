@@ -331,3 +331,7 @@
 .bedroom-single-row:last-child{
     border: none;
 }
+
+.fav-home{
+    color: red;
+}

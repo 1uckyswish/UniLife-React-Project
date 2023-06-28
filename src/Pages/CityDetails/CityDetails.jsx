@@ -16,7 +16,7 @@ function CityDetails({ data }) {
   useEffect(() => {
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${homeid}`)
       .then((result) => {
-        console.log(result.data.response);
+        console.log("test for prop", result.data.response);
         setSingleData(result.data.response);
         setCityPrices(result.data.response.map(city => city.rent));
       })

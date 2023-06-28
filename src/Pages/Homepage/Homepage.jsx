@@ -23,13 +23,11 @@ function Homepage({data}) {
       <div className='form-container'>
       <select name="Search by city" id="cities" onChange={getValue}>
         <option value="">Search by city</option>
-        {
-          cities.map((item) => (
-            <option key={item?.id} value={item?._id}>
-              {item?.name}
-            </option>
-          ))
-        }
+        {cities.map((item) => (
+          <option key={item._id} value={item._id}>
+            {item.name}
+          </option>
+        ))}
       </select>
       {
         optionId !== '' ?

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './HomeDetailPage.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -12,12 +12,16 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import BookingModal from '../../Components/BookingModal/BookingModal';
+import { ShortList } from "../../Contexts/ShortList";
+
 
 function HomeDetailPage() {
   const { propertyid, homeid } = useParams();
   const [homeData, setHomeData] = useState([]);
   const [imageIndex, setImageIndex] = useState(0)
   const [bookingModal, setBookingModal] = useState(false);
+  const { favorites, addHome, removeHome } = useContext(ShortList);
+
 
   function eventHandle(){
     setBookingModal(!bookingModal)
@@ -144,7 +148,21 @@ function HomeDetailPage() {
                </div>
             </div>
              <div className="detail-info-buttons">
-                <button><FontAwesomeIcon icon={faHeart} /> Shortlist</button>
+            <button onClick={() => {
+                  const isFavorite = favorites.find(item => item?._id === homeData?._id);
+                  if (isFavorite) {
+                    removeHome(homeData?._id);
+                  } else {
+                    addHome(homeData);
+                  }
+                }}>
+                  {favorites.find(item => item?._id === homeData?._id) ? (
+                    <FontAwesomeIcon icon={faHeart} className="fav-home" />
+                  ) : (
+                    <FontAwesomeIcon icon={faHeart} />
+                  )}
+                  Shortlist
+                </button>
                 <button onClick={eventHandle}>Book Viewing</button>
                 <Modal
                   isOpen={bookingModal}

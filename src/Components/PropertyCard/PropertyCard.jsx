@@ -24,7 +24,7 @@ function PropertyCard({card, homeid}) {
 
   return (
     <div className='single-property-card'>
-          <img src={card?.images[1]} />
+          <img src={card?.images?.[0]} />
         <div className='property-info-container'>
             <div className='property-info'>
                <p><FontAwesomeIcon icon={faDollarSign} />{card?.rent}</p>
@@ -45,7 +45,7 @@ function PropertyCard({card, homeid}) {
           <div className="property-address-container">
             <div className="property-address">
                <FontAwesomeIcon icon={faMapPin} />
-              <p>{card?.address.street}, {card?.address.city}, {card?.address.postcode}</p>
+              <p>{card?.address?.street}, {card?.address?.city}, {card?.address?.postcode}</p>
             </div>
             <div id="shortlist-icon">
                { 
