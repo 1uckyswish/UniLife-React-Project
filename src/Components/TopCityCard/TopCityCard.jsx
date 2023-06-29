@@ -1,12 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function TopCityCard({ topCity }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const cardStyle = {
     position: 'relative',
     width: '100%',
-    height: '100%',
+    height: windowWidth >= 600 ? '100%' : '120%', // Adjust the height based on the screen width
     borderRadius: '24px',
     overflow: 'hidden',
   };
