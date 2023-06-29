@@ -125,7 +125,12 @@
     text-align: center;
 }
 
-.form-container a, button{
+.form-container button{
+    width: auto;
+    padding: 0 10px;
+}
+
+.form-container a{
     width: auto;
     padding: 0 10px;
 }
