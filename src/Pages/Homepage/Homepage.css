@@ -64,6 +64,12 @@
     margin-bottom: 100px;
 }
 
+.top-cities-container h1{
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
 #all-cities-button{
      width: 200px;
     height: 48px;
@@ -80,11 +86,6 @@
     color: var(--White-Text);
 }
 
-.top-cities-container h1{
-    font-weight: bold;
-    font-size: 36px;
-    text-align: center;
-}
 
 .details-container{
     display: flex;
@@ -96,4 +97,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* media queries */
+
+/* tablet css  */
+@media screen and (max-width: 730px){
+.top-cities-container{
+    margin-top: 20px;
+}
+
+.top-cities-container h1{
+    font-size: 24px; 
+}
+
+
+}
+
+/* Mobile Css */
+@media screen and (max-width: 600px){
+.form-container{
+    flex-direction: column;
+}
+
+.form-container select{
+    width: 85%;
+    text-align: center;
+}
+
+.form-container a, button{
+    width: auto;
+    padding: 0 10px;
+}
+
+.top-cities-container{
+    margin-top: 30px;
+}
 }

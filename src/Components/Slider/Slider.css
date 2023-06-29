@@ -38,18 +38,9 @@
 /* media queries */
 
 /* tablet css  */
-@media screen and (max-width: 900px){
-.slider-header {
-  top: 120px;
-  width: auto;
-}
-
-.slider-header h2{
-  font-size: 40px; 
-}
-
-.slider-header p{
-  font-size: 20px; 
+@media screen and (max-width: 730px){
+.slider-header{
+  top: 80px;
 }
 
 
@@ -57,14 +48,22 @@
 }
 
 /* Mobile Css */
-@media screen and (max-width: 600px){
-
-.slider-header {
-  top: 80px;
-  width: auto;
+@media screen and (max-width: 510px){
+.slider-container {
+  height: 50vh;
 }
 
+/* .slider-header{
+  top: 80px;
+} */
 
+.slider-header h2 {
+  font-size: 34px;
+}
 
+.slider-header p {
+  font-size: 20px;
+   line-height: 1.5;
+}
 
 }
