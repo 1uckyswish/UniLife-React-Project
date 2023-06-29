@@ -102,22 +102,25 @@
 /* media queries */
 
 /* tablet css  */
-@media screen and (max-width: 730px){
+@media screen and (max-width: 930px){
 .top-cities-container{
     margin-top: 20px;
 }
 
 .top-cities-container h1{
-    font-size: 24px; 
+    font-size: 30px; 
 }
 
-
+.favorite-container{
+    display: none;
+}
 }
 
 /* Mobile Css */
 @media screen and (max-width: 600px){
 .form-container{
     flex-direction: column;
+    top: -3%;
 }
 
 .form-container select{
@@ -136,6 +139,14 @@
 }
 
 .top-cities-container{
-    margin-top: 30px;
+    margin-top: 60px;
+}
+
+.top-cities-container h1{
+    font-size: 24px; 
+}
+
+.details-container{
+    display: none;
 }
 }

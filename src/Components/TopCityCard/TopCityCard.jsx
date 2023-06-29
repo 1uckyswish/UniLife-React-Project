@@ -18,8 +18,8 @@ function TopCityCard({ topCity }) {
 
   const cardStyle = {
     position: 'relative',
-    width: '100%',
-    height: windowWidth >= 600 ? '100%' : '120%', // Adjust the height based on the screen width
+    width: windowWidth >= 600 ? '100%' : 'auto',
+    height: windowWidth >= 600 ? '300px' : '280px', // Adjust the height based on the screen width
     borderRadius: '24px',
     overflow: 'hidden',
   };
