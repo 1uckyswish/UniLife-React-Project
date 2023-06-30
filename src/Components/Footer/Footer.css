@@ -189,18 +189,19 @@
 
 .footer-container-items{
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     align-items: center;
+    border: 2px solid red;
 }
 
 .newsletter-container{
-    height: 50vh;
+    height: 35vh;
     width: 90%;
 }
 
 .social-container{
     width: 90%;
-    padding: 0 20px;
+    padding: 0 15px;
     height: 30vh;
 }
 

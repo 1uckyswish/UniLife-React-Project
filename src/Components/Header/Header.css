@@ -48,10 +48,9 @@ a{
 
 /* tablet css  */
 @media screen and (max-width: 918px){
-
-
-
-
+.title-icon{
+    font-size: 2em;
+}
 
 
 }
