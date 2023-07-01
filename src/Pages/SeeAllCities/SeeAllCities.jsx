@@ -13,7 +13,7 @@ const { cities } = useContext(AllCitiesFetch)
     <Slider data={data}/>
     <div className='all-cities-container'>
       <h2>Search by City</h2>
-      <div className='all-city-buttons' key={cities?.id}>
+      <div className='all-city-buttons' key={cities?._id}>
        {
         cities.slice(0,24).map((city) => <Link to={`/CityDetails/${city?._id}`} key={city?.id}><button>{city?.name}</button></Link>)
        }

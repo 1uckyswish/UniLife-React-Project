@@ -45,7 +45,7 @@ function CityDetails({ data }) {
       <Slider data={data} />
       <div className="city-details-container">
         <div className='filter-form-container'>
-          <div className="filter-form-titles">
+          <div className="filter-form-titles" key={data?.city_id}>
             <p>Min Bedroom</p>
             <p>Min Bathroom</p>
             <p>Max Price</p>

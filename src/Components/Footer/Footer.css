@@ -162,7 +162,7 @@
 }
 
 .newsletter-container{
-    height: 50vh;
+    height: 35vh;
     width: 90%;
 }
 
@@ -189,20 +189,21 @@
 
 .footer-container-items{
     flex-direction: column;
-    height: auto;
+    height: 100vh;
     align-items: center;
-    border: 2px solid red;
 }
 
 .newsletter-container{
-    height: 35vh;
+    height: 50vh;
     width: 90%;
+    font-size: 16px;
 }
+
 
 .social-container{
     width: 90%;
     padding: 0 15px;
-    height: 30vh;
+    height: 45vh;
 }
 
 .credits-container{
@@ -210,7 +211,7 @@
 }
 
 .footer-links-container{
-    height: 20vh;
+    height: 25vh;
 }
 
 .footer-copyright-container{

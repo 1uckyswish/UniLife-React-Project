@@ -1,12 +1,9 @@
 .city-details-container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     position: relative;
-    /* border: 3px solid purple; */
     min-height: 100vh;
-    /* height: 1500px; */
 }
 
 .filter-form-container{
@@ -56,7 +53,6 @@
 
 .property-card-container{
     margin: 150px auto 0 auto;
-    /* border: 2px solid green; */
     height: auto;
     display: flex;
     width: 92%;
@@ -84,5 +80,126 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   flex-wrap: wrap;
-  /* border: 2px solid red; */
+}
+
+
+
+/* media queries */
+
+/* tablet css  */
+@media screen and (max-width: 930px){
+.filter-form-container{
+    width: 90%;
+    align-items: center;
+}
+
+.filter-form-titles{
+    display: none;
+}
+
+.filter-form-inputs{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+    margin: 0 25px 0 25px;
+}
+
+.filter-form-inputs select{
+    width: 282px;
+    height: 48px;
+    margin: 8px;
+}
+
+
+
+.city-details-container{
+    height: auto;
+}
+
+.property-card-container{
+    height: auto;
+}
+
+.property-card-grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
+
+/* Mobile Css */
+@media screen and (max-width: 720px){
+.filter-form-container{
+    width: 90%;
+    align-items: center;
+    height: auto;
+    top:-160px;
+    padding: 10px 0;
+}
+
+.filter-form-titles{
+    display: none;
+}
+
+.filter-form-inputs{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+    margin: 0 25px 0 25px;
+}
+
+.filter-form-inputs select{
+    width: 282px;
+    height: 48px;
+    margin: 8px;
+}
+
+
+
+.city-details-container{
+    height: auto;
+}
+
+.property-card-container{
+    height: auto;
+}
+
+.property-card-grid{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+}
+
+@media screen and (max-width: 340px){
+.filter-form-container{
+    width: 95%;
+    align-items: center;
+    height: auto;
+    top:-70px;
+    padding: 10px 15px;
+}
+
+.filter-form-titles{
+    display: none;
+}
+
+.filter-form-inputs{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+    margin: 0 25px 0 25px;
+}
+
+.filter-form-inputs select{
+    width: 232px;
+    height: 48px;
+    margin: 8px;
+}
+
+.property-card-container{
+    margin-top: 280px;
+}
+
 }

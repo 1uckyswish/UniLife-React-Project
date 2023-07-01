@@ -150,3 +150,40 @@
     display: none;
 }
 }
+
+/* Mobile Css */
+@media screen and (max-width: 430px){
+.form-container{
+    flex-direction: column;
+    top: -1.5%;
+}
+
+.form-container select{
+    width: 85%;
+    text-align: center;
+}
+
+.form-container button{
+    width: auto;
+    padding: 0 10px;
+}
+
+.form-container a{
+    width: auto;
+    padding: 0 10px;
+}
+
+.top-cities-container{
+    margin-top: 100px;
+}
+
+.top-cities-container h1{
+    font-size: 24px; 
+}
+
+.details-container{
+    display: none;
+}
+
+
+}

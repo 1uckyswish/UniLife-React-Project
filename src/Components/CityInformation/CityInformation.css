@@ -38,3 +38,93 @@ line-height: 48px;
     border-radius: 24px;
     width: auto;
 }
+
+/* media queries */
+
+/* tablet css  */
+@media screen and (max-width: 930px){
+.city-banner{
+    /* border: 2px solid red; */
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+}
+
+.city-banner-info{
+    /* border: 2px solid green;  */
+}
+
+.city-banner-info span{
+    color: var(--Baby-Blue-Body);
+}
+
+.city-banner-info h2{
+    font-size: 32px;
+}
+
+.city-banner-info p{
+    font-size: 18px;
+    line-height: 32px; 
+}
+
+.city-banner-img img{
+    border-radius: 24px;
+    width: auto;
+    height: auto; 
+    object-fit: cover;
+    margin: 0;
+}
+
+}
+
+/* Mobile Css */
+@media screen and (max-width: 720px){
+.city-banner{
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+}
+
+.city-banner-info{
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.city-banner-info span{
+    color: var(--Baby-Blue-Body);
+}
+
+.city-banner-info h2{
+    font-size: 32px;
+}
+
+.city-banner-info p{
+    font-size: 16px;
+    line-height: 32px; 
+}
+
+.city-banner-img{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+}
+
+.city-banner-img img{
+    border-radius: 24px;
+    width: 90%;
+    height: auto; 
+    object-fit: cover;
+    margin: 10px 5px 10px 0;
+}
+
+
+}
+
+@media screen and (max-width: 350px){
+
+
+}
