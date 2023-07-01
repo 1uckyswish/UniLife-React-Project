@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import './HomeDetailPage.css';
 import axios from 'axios';
+import Modal from 'react-modal';
+import BookingModal from '../../Components/BookingModal/BookingModal';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -10,13 +12,11 @@ import { faBed } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
-import BookingModal from '../../Components/BookingModal/BookingModal';
 import { ShortList } from "../../Contexts/ShortList";
 
 
 function HomeDetailPage() {
-  const { propertyid, homeid } = useParams();
+  const { propertyid } = useParams();
   const [homeData, setHomeData] = useState([]);
   const [imageIndex, setImageIndex] = useState(0)
   const [bookingModal, setBookingModal] = useState(false);
@@ -93,7 +93,7 @@ function HomeDetailPage() {
             <h2>Key Features</h2>
             <div className="list-features">
               <p><FontAwesomeIcon icon={faCheckCircle} />Great Size Period Property</p>
-              <p><FontAwesomeIcon icon={faCheckCircle} />Four / Five Bedrooms</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />Three / Five Bedrooms</p>
               <p><FontAwesomeIcon icon={faCheckCircle} />Two Reception Rooms</p>
               <p><FontAwesomeIcon icon={faCheckCircle} />OpenPlan Dining Kitchen</p>
               <p><FontAwesomeIcon icon={faCheckCircle} />Two Bath/Shower Rooms & Two WC's</p>

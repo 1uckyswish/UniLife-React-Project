@@ -1,16 +1,13 @@
 .home-detail-container{
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 0 20px; */
-    min-height: 100vh;
+    height: auto;
     margin: 0 20px;
 }
 
 .detail-containers{
     display: flex;
-    /* border: 2px solid blue; */
     justify-content: space-evenly;
     padding-top: 30px;
 }
@@ -25,7 +22,6 @@
     margin-left:40px;
     margin-top: 30px;
     color: var(--Baby-Blue-Body);
-     /* border: 2px solid blue; */
 }
 
 #take-back-link svg{
@@ -34,18 +30,15 @@
 }
 
 .left-detail-container{
-    /* border: 2px solid green; */
     height: auto;
     width: 50%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
 .detail-image-container{
     height: auto;
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,7 +48,6 @@
 
 #big-image-container{
     height: 100%; 
-    /* padding: 15px 0; */
     margin: 0 0 20px 0;
 }
 
@@ -91,7 +83,6 @@
     margin: 20px 0;
     display: flex;
     flex-direction: column;
-    /* border: 2px solid yellowGreen; */
     /* width: auto; */
     height: 40vh; 
     justify-content: space-evenly;
@@ -144,14 +135,13 @@
 .right-detail-container{
     /* border: 2px solid purple; */
     width: 46%;
-    min-height: 100vh;
+    height: auto;
 }
 
 
 .home-detail-card{
     width: auto;
     height: 70vh;
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -183,7 +173,6 @@
 }
 
 .detail-info-icons{
-    /* border: 2px solid red; */
     height: 46vh;
     width: 100%;
     display: flex;
@@ -267,7 +256,7 @@
     /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 35px;
     width: auto;
 }
 
@@ -334,4 +323,312 @@
 
 .fav-home{
     color: red;
+}
+/* media queries */
+
+/* tablet css  */
+@media screen and (max-width: 930px) {
+    #three-images-container {
+        height: auto;
+    }
+
+    .trio-images {
+        height: 200px;
+        width: auto;
+    }
+
+    .detail-containers {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .left-detail-container {
+        width: auto;
+    }
+
+    .right-detail-container {
+        width: 100%;
+        margin-bottom: 700px;
+    }
+
+    .home-detail-card {
+        height: 42vh;
+    }
+
+    .detail-info-icons {
+        height: 30vh;
+    }
+
+    .detail-info-buttons {
+        margin: 0;
+    }
+}
+
+/* Mobile Css */
+@media screen and (max-width: 560px) {
+    #take-back-link{
+    margin-left:8px;
+    }
+    .detail-image-container {
+        width: 100%;
+    }
+
+    #three-images-container {
+        height: auto;
+    }
+
+    .trio-images {
+        height: 100px;
+    }
+
+    .description-container {
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .description-container h2 {
+        font-size: 30px;
+    }
+
+    .description-container p {
+        font-size: 16px;
+    }
+
+    .key-features-container h2 {
+        font-size: 30px;
+    }
+
+    .key-features-container p {
+        font-size: 16px;
+    }
+
+    .home-detail-card {
+        height: 45vh;
+    }
+
+    .detail-info-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail-info-section span:first-child {
+        font-size: 30px;
+    }
+
+    #single-line {
+        border: 1px solid #CED3D8;
+        width: 90%;
+    }
+
+    .detail-info-icons {
+        height: 30vh;
+    }
+
+    .detail-icon-row-two svg {
+        font-size: 20px;
+    }
+
+    .detail-icon-box-title p:first-child {
+        font-size: 14px;
+    }
+
+    .detail-icon-boxes p {
+        font-size: 13px;
+    }
+
+    .detail-icon-boxes span {
+        font-size: 22px;
+    }
+
+    #special-font {
+        font-size: 16px;
+    }
+
+    .detail-info-buttons {
+        margin-top: 15px;
+    }
+
+    .bedroom-container-title {
+        font-size: 30px;
+    }
+
+    .bedroom-single-row {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Css */
+@media screen and (max-width: 430px) {
+    .description-container {
+        height: auto;
+        padding: 0 10px;
+        width: auto;
+    }
+
+    .description-container h2 {
+        font-size: 30px;
+    }
+
+    .description-container p {
+        font-size: 14px;
+    }
+
+    .key-features-container h2 {
+        font-size: 30px;
+    }
+
+    .key-features-container p {
+        font-size: 16px;
+    }
+
+    .home-detail-card {
+        height: 56vh;
+    }
+
+    .detail-info-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail-info-section span:first-child {
+        font-size: 30px;
+    }
+
+    #single-line {
+        border: 1px solid #CED3D8;
+        width: 90%;
+    }
+
+    .detail-info-icons {
+        height: 30vh;
+    }
+
+    .detail-icon-row-two svg {
+        font-size: 20px;
+    }
+
+    .detail-icon-box-title p:first-child {
+        font-size: 12px;
+    }
+
+    .detail-icon-boxes p {
+        font-size: 10px;
+    }
+
+    .detail-icon-boxes span {
+        font-size: 17px;
+    }
+
+    #special-font {
+        font-size: 14px;
+    }
+
+    .detail-info-buttons {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-info-buttons button {
+        margin: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .home-detail-card {
+        height: 100vh;
+    }
+
+    .right-detail-container {
+        margin-bottom: 20px; /* Remove excessive margin */
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .description-container {
+        height: auto;
+        padding: 0 10px;
+        width: auto;
+    }
+
+    .home-detail-card {
+        height: auto;
+        padding: 50px 5px;
+        width: auto;
+    }
+
+    .detail-info-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail-info-section span:first-child {
+        font-size: 30px;
+    }
+
+    #single-line {
+        border: 1px solid #CED3D8;
+        width: 90%;
+    }
+
+    .detail-info-icons {
+        height: auto;
+    }
+
+    .detail-icon-boxes {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .detail-icon-row-two svg {
+        font-size: 20px;
+    }
+
+    .detail-icon-box-title p:first-child {
+        font-size: 10px;
+    }
+
+    .detail-icon-boxes p {
+        font-size: 10px;
+    }
+
+    .detail-icon-boxes span {
+        font-size: 17px;
+    }
+
+    #special-font {
+        font-size: 13px;
+    }
+
+    .detail-info-buttons {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-info-buttons button {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .bedroom-prices-container {
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+
+    .bedroom-container-title {
+        margin-bottom: 0px;
+    }
+
+    .bedroom-row-chart {
+        height: 50vh;
+    }
 }
