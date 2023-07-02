@@ -133,7 +133,6 @@
 }
 
 .right-detail-container{
-    /* border: 2px solid purple; */
     width: 46%;
     height: auto;
 }
@@ -486,6 +485,7 @@
 
     .home-detail-card {
         height: 56vh;
+        border: none;
     }
 
     .detail-info-section {
@@ -493,6 +493,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border: 1.5px solid #CED3D8;
+        border-radius: 24px;
     }
 
     .detail-info-section span:first-child {
@@ -543,6 +545,7 @@
 @media screen and (max-width: 375px) {
     .home-detail-card {
         height: 100vh;
+        border: none;
     }
 
     .right-detail-container {
@@ -568,6 +571,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border: 1.5px solid #CED3D8;
+        border-radius: 24px;
     }
 
     .detail-info-section span:first-child {

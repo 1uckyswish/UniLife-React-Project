@@ -22,6 +22,7 @@
   align-items: center;
   font-size: 16px;
   cursor: pointer;
+  color: var(--Black-Text);
 }
 
 .single-property-card a{
@@ -36,6 +37,7 @@
   align-items: center;
   font-size: 16px;
   cursor: pointer;
+color: var(--Black-Text);
 }
 
 .single-property-card button p{

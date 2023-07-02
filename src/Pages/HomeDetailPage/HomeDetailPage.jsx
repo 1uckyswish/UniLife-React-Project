@@ -103,7 +103,7 @@ function HomeDetailPage() {
               <p><FontAwesomeIcon icon={faCheckCircle} />Three / Five Bedrooms</p>
               <p><FontAwesomeIcon icon={faCheckCircle} />Two Reception Rooms</p>
               <p><FontAwesomeIcon icon={faCheckCircle} />OpenPlan Dining Kitchen</p>
-              <p><FontAwesomeIcon icon={faCheckCircle} />Two Bath/Shower Rooms & Two WC's</p>
+              <p><FontAwesomeIcon icon={faCheckCircle} />Two Bathrooms and Two Toilet Units</p>
             </div>
           </div>
         </div>
@@ -142,13 +142,13 @@ function HomeDetailPage() {
                       </div>
                     <div className="detail-icon-boxes">
                       <div className="detail-icon-box-title">
-                        <p>Furnished type</p>
+                        <p>Furnished Type</p>
                       </div>
                      <p id='special-font'>{homeData?.furnished}</p>
                       </div>
                     <div className="detail-icon-boxes">
                       <div className="detail-icon-box-title">
-                        <p>Available from</p>
+                        <p>Available</p>
                       </div>
                       <p id='special-font'>{homeData?.createdAt?.slice(0,10)}</p>
                       </div>

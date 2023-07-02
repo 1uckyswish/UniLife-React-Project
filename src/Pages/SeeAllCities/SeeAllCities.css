@@ -24,6 +24,11 @@
   gap:10px
 }
 
+.all-city-buttons a{
+    text-decoration: none;
+    color: var(--Black-Text);
+}
+
 .all-city-buttons button{
     width: 280px;
     height: 88px;
@@ -36,6 +41,7 @@
     align-items: center;
     font-weight: bolder;
     transition: background-color 0.5s ease, color 0.5s ease;
+    color: var(--Black-Text);
 }
 
 .all-city-buttons button:hover{
@@ -76,6 +82,7 @@
 
 .all-cities-container h2{
     margin: 50px 0;
+    font-size: 26px;
 }
 
 .all-city-buttons{
@@ -87,6 +94,10 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+
+.all-city-buttons button{
+    font-size: 26px;
 }
 
 
