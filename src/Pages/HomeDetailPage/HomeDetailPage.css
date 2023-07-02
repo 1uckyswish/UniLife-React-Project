@@ -330,7 +330,7 @@
     }
 
     .trio-images {
-        height: 200px;
+        height: 15vh;
         width: auto;
     }
 
@@ -376,7 +376,8 @@
     }
 
     .trio-images {
-        height: 100px;
+         height: 10vh;
+        width: 100%;
     }
 
     .description-container {

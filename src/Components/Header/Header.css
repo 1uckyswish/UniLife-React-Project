@@ -140,7 +140,7 @@ a{
 @media screen and (max-width: 540px){
     .hamburger-menu {
     height: auto;
-    width: 102vw;
+    width: 103vw;
     position: absolute;
     top: 51px;
     right: -18px;
@@ -160,7 +160,7 @@ a{
 @media screen and (max-width: 360px){
     .hamburger-menu {
     height: auto;
-    width: 103vw;
+    width: 104vw;
     position: absolute;
     top: 45px;
     right: -18px;
