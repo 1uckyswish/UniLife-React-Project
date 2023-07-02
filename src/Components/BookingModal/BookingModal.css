@@ -151,20 +151,57 @@
  .booking-container{
     width: 70vw;
     height: auto;
-    margin-bottom: 200px;
+}
+
+
+.booking-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking-title h2{
+    font-size: 24px;
+}
+
+.booking-title svg{
+    font-size: 2em;
+}
+
+.booking-address{
+    width: auto;
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+.booking-form{
+    width: auto;
+}
+
+.booking-form input::placeholder, textarea::placeholder{
+    color: #a6a8aa;
+    font-size: 16px;
 }
 
 .booking-form-left input{
     width: auto;
+    height: 40px;
+}
+
+.booking-form p{
+    font-size: 18px;
+    padding: 2px;
 }
 
 
 .booking-form-right textarea{
     width: auto;
+    height: 100px;
 }
 
 .booking-form-right button{
     width: auto;
+    height: 45px;
+    margin-top: 10px;
 }
 }
 
