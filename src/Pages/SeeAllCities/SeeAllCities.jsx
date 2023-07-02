@@ -1,11 +1,18 @@
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
 import "./SeeAllCities.css"
 import Slider from '../../Components/Slider/Slider'
 import { AllCitiesFetch } from '../../Contexts/AllCitiesFetch'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 function SeeAllCities({ data }) {
 
 const { cities } = useContext(AllCitiesFetch)
+ const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
 
 
   return (

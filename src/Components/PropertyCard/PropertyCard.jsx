@@ -23,7 +23,7 @@ function PropertyCard({card, homeid}) {
       )
 
   return (
-    <div className='single-property-card'>
+    <div className='single-property-card'  key={card?._id}>
           <img src={card?.images?.[0]} />
         <div className='property-info-container'>
             <div className='property-info'>

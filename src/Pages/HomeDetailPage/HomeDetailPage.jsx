@@ -13,6 +13,7 @@ import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { ShortList } from "../../Contexts/ShortList";
+import { useLocation } from 'react-router-dom';
 
 
 function HomeDetailPage() {
@@ -22,6 +23,12 @@ function HomeDetailPage() {
   const [bookingModal, setBookingModal] = useState(false);
   const { favorites, addHome, removeHome } = useContext(ShortList);
   const isFavorite = favorites.find(item => item?._id === homeData?._id);
+   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
 
 
   function eventHandle(){

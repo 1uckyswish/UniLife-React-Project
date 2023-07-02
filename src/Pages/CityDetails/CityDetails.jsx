@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import PropertyCard from '../../Components/PropertyCard/PropertyCard';
 import CityInformation from '../../Components/CityInformation/CityInformation';
+import { useLocation } from 'react-router-dom';
 
 function CityDetails({ data }) {
   const { homeid } = useParams();
@@ -12,6 +13,12 @@ function CityDetails({ data }) {
   const [cityPrices, setCityPrices] = useState([])
   const numArray = [1,2,3,4,5,6]
   const homes = ["Apartment","Detached","Semi-Detached"]
+   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
 
   useEffect(() => {
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${homeid}`)
