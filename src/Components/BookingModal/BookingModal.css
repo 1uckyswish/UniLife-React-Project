@@ -135,62 +135,36 @@
 /* Mobile Css */
 @media screen and (max-width: 680px){
 .booking-container{
-   flex-direction: column;
-   width: 304px;
-   height: auto;
-}
-
-.booking-form{
-    flex-direction: column;
     width: auto;
-}
-.booking-form p{
-    padding: 10px 0;
-}
-
-.booking-form-left input{
-    width: 250px;
-}
-
-
-.booking-form-right textarea{
-    width: 250px;
-}
-
-.booking-form-right button{
-width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+    z-index: 1;
+    position: relative;
 }
 }
 
 /* Mobile CSS */
-@media screen and (max-width: 420px) {
-  .booking-container {
-    flex-direction: column;
-    width: 250px;
-    height: 80vh;
-    margin: 70px 0;
-    /* position: static; */
-  }
+@media screen and (max-width: 510px) {
+ .booking-container{
+    width: 70vw;
+    height: auto;
+    margin-bottom: 200px;
+}
 
-  .booking-form {
-    flex-direction: column;
+.booking-form-left input{
     width: auto;
-  }
+}
 
-  .booking-form p {
-    padding: 10px 0;
-  }
 
-  .booking-form-left input {
-    width: 200px;
-  }
+.booking-form-right textarea{
+    width: auto;
+}
 
-  .booking-form-right textarea {
-    width: 200px;
-  }
-
-  .booking-form-right button {
-    width: 200px;
-  }
+.booking-form-right button{
+    width: auto;
+}
 }
 
