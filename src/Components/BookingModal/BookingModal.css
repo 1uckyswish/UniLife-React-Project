@@ -163,12 +163,13 @@ width: 250px;
 }
 
 /* Mobile CSS */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 420px) {
   .booking-container {
     flex-direction: column;
     width: 250px;
     height: 80vh;
     margin: 70px 0;
+    /* position: static; */
   }
 
   .booking-form {
