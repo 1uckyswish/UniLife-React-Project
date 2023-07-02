@@ -149,7 +149,6 @@
 }
 
 .detail-info-section{
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,7 +159,6 @@
     text-align: center;
     font-size: 36px;
     line-height: 48px;
-    /* border: 2px solid red; */
     width: 65%;
     margin: 40px 0;
 }
@@ -181,7 +179,6 @@
 }
 
 .detail-icon-row-one{
-    /* border: 1px solid green; */
     height:auto;
     display: flex;
      text-align: center;
@@ -197,7 +194,6 @@
 }
 
 .detail-icon-row-two{
-    /* border: 1px solid purple; */
     height:auto;
     display: flex;
     text-align: center;
@@ -208,7 +204,6 @@
 }
 
 .detail-icon-boxes{
-    /* border: 1px dotted blue; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -252,7 +247,6 @@
 }
 
 .detail-info-buttons{
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
@@ -266,6 +260,11 @@
     border-radius: 12px;
     border: none;
     cursor: pointer;
+    color: var(--Black-Text);
+}
+
+.detail-info-buttons a{
+    color: var(--Black-Text);
 }
 
 .detail-info-buttons button:first-child{
@@ -283,7 +282,6 @@
 }
 
 .bedroom-prices-container{
-    /* border: 1px dotted purple; */
     width: 100%x;
     min-height: 50vh;
     display: flex;
@@ -294,7 +292,7 @@
 .bedroom-container-title{
     font-size: 36px;
     font-weight: 500;
-    line-height: 48px; 
+    line-height: 48px;
     color: salmon;
 }
 
@@ -540,6 +538,11 @@
         margin: 10px;
         width: 100%;
     }
+
+      .bedroom-container-title {
+        margin-bottom: 0px;
+        margin-left: 5px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -631,6 +634,7 @@
 
     .bedroom-container-title {
         margin-bottom: 0px;
+        margin-left: 5px;
     }
 
     .bedroom-row-chart {
