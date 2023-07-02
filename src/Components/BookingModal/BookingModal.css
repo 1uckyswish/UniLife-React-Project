@@ -162,33 +162,34 @@ width: 250px;
 }
 }
 
-/* Mobile Css */
-@media screen and (max-width: 430px){
-.booking-container{
-   flex-direction: column;
-   width: 230px;
-   height: auto;
-}
+/* Mobile CSS */
+@media screen and (max-width: 430px) {
+  .booking-container {
+    flex-direction: column;
+    width: 250px;
+    height: 80vh;
+    margin: 40px 0;
+  }
 
-.booking-form{
+  .booking-form {
     flex-direction: column;
     width: auto;
-}
-.booking-form p{
+  }
+
+  .booking-form p {
     padding: 10px 0;
-}
+  }
 
-.booking-form-left input{
+  .booking-form-left input {
     width: 200px;
-}
+  }
 
-
-.booking-form-right textarea{
+  .booking-form-right textarea {
     width: 200px;
+  }
+
+  .booking-form-right button {
+    width: 200px;
+  }
 }
 
-.booking-form-right button{
-width: 200px;
-}
-
-}

@@ -3,6 +3,7 @@
   justify-content: center;
   position: relative;
   height: auto;
+  z-index: -1;
 }
 
 .slider-image{
