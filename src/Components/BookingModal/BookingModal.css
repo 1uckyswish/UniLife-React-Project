@@ -151,6 +151,7 @@
  .booking-container{
     width: 70vw;
     height: auto;
+    z-index: 1;
 }
 
 
@@ -201,6 +202,68 @@
 .booking-form-right button{
     width: auto;
     height: 45px;
+    margin-top: 10px;
+}
+}
+
+
+/* Mobile CSS */
+@media screen and (max-width: 360px) {
+ .booking-container{
+    width: 60vw;
+    height: auto;
+    z-index: 1;
+}
+
+
+.booking-title{
+    width: auto;
+    padding: 0;
+}
+
+.booking-title h2{
+    font-size: 20px;
+}
+
+.booking-title svg{
+    font-size: 2em;
+    display: none;
+}
+
+.booking-address{
+    width: auto;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.booking-form{
+    width: auto;
+}
+
+.booking-form input::placeholder, textarea::placeholder{
+    color: #a6a8aa;
+    font-size: 13px;
+}
+
+.booking-form-left input{
+    width: auto;
+    height: 35px;
+}
+
+.booking-form p{
+    font-size: 16px;
+    padding: 2px;
+}
+
+
+.booking-form-right textarea{
+    width: auto;
+    height: 100px;
+}
+
+.booking-form-right button{
+    width: auto;
+    height: 35px;
     margin-top: 10px;
 }
 }
