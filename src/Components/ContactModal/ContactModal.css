@@ -170,106 +170,199 @@
 }
 
 /* Mobile Css */
-@media screen and (max-width: 680px) {
-   .contact-container{
+@media screen and (max-width: 640px) {
+
+.contact-container{
+    width: 70vw;
     height: auto;
-    width: 300px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+
+.contact-container p:nth-child(2){
+    font-size: 18px;
+    padding: 0 30px;
 }
 
 .contact-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px;
+    padding: 8px 30px;
+}
+
+.contact-header h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.contact-header img{
+    width: 2em;
 }
 
 .contact-form-container{
-    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 20px; */
+    height: auto;
     width: auto;
-    padding: 0 30px;
-    margin-top: 20px;
+    margin: 8px 0;
 }
 
-
 .contact-form-container p{
-    margin: 3px 0;
-    width: 450px;
+    font-size: 16px;
 }
 
 .contact-form-container input{
-    margin: 10px 0;
-    width: 250px;
+    width: auto;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid var(--Email-Form-Text);
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
-
 .contact-form-container select{
-    width: 250px;
-    margin-top: 15px;
+    width: auto;
+    height: 40px;
+     color: #626363;
+     font-size: 16px;
+}
+.contact-form-container input::placeholder{
+     color: #626363;
+     font-size: 16px;
+}
+
+.form-container-1{
+    width:auto;
+    height: auto;
+}
+
+.form-container-2{
+    padding: 10px 0;
+    width: auto;
+    height: auto;
+    margin: 0;
 }
 
 
 .form-container-2 textarea{
-    width: 250px;
+    width: auto;
+    height: 150px;
+}
+
+.form-container-2 textarea::placeholder{
+    color: #626363;
+     font-size: 16px;
 }
 
 .form-container-2 button{
-    width: 250px;
-    margin-top: 10px;
+    width: auto;
+    height: 50px;
 }
 }
 
 /* Mobile Css */
-@media screen and (max-width: 360px){
-   .contact-container{
+@media screen and (max-width: 380px){
+
+
+
+.contact-container{
+    width: 60vw;
     height: auto;
-    width: 250px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+
+.contact-container p:nth-child(2){
+    font-size: 14px;
+    padding: 0;
+    display: none;
 }
 
 .contact-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px;
+    padding: 0px 0px;
+    margin: 0;
+    display: none;
 }
+
+.contact-header h2{
+    font-weight: 500;
+    font-size: 24px;
+}
+
 
 .contact-form-container{
-    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 20px; */
+    height: auto;
     width: auto;
-    padding: 0 30px;
-    margin-top: 20px;
+    padding: 0;
 }
 
-
 .contact-form-container p{
-    margin: 3px 0;
+    font-size: 16px;
 }
 
 .contact-form-container input{
-    margin: 10px 0;
-    width: 200px;
-}
-
-.contact-form-container input::placeholder{
-    margin: 10px 0;
-    width: 200px;
-    font-size: 14px;
+    width: auto;
+    height: 35px;
+    font-size: 12px;
 }
 
 .contact-form-container select{
-    width: 200px;
-    margin-top: 15px;
+    width: auto;
+    height: 35px;
+     color: #626363;
+     font-size: 12px;
+}
+.contact-form-container input::placeholder{
+     color: #626363;
+     font-size: 12px;
+}
+
+.form-container-1{
+    width:auto;
+    height: auto;
+}
+
+.form-container-2{
+    padding: 8px 0;
+    width: auto;
+    height: auto;
+    margin: 0;
 }
 
 
 .form-container-2 textarea{
-    width: 200px;
+    width: auto;
+    height: 130px;
+}
+
+.form-container-2 textarea::placeholder{
+    color: #626363;
+     font-size: 12px;
 }
 
 .form-container-2 button{
-    width: 200px;
-    margin-top: 10px;
+    width: auto;
+    height: 50px;
+}
+
+
+
+ .contact-header img{
+    display: none;
 }
 
 }
