@@ -27,6 +27,7 @@
     text-align: start;
     padding-left: 20px;
     font-size: 20px;
+    color:var(--Black-Text);
 }
 
 .form-container button{
@@ -54,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .top-cities-container{
@@ -121,16 +123,19 @@
 .form-container{
     flex-direction: column;
     top: -3%;
+    padding: 8px;
 }
 
 .form-container select{
-    width: 85%;
+    width: 80%;
+    height: 35%;
     text-align: center;
 }
 
 .form-container button{
     width: auto;
-    padding: 0 10px;
+    padding: 0 25px;
+    font-size: 1em;
 }
 
 .form-container a{
