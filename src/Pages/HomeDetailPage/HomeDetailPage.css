@@ -49,6 +49,7 @@
 #big-image-container{
     height: 100%; 
     margin: 0 0 20px 0;
+    z-index: -1;
 }
 
 #big-image-container img{
@@ -64,6 +65,7 @@
     height: 140px;
     width: 100%;
     display: flex;
+    z-index: -1;
 }
 
 .trio-images{

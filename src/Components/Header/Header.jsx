@@ -60,7 +60,7 @@ function Header() {
         <AiOutlineMail className="header-link-icons" />
         <p onClick={handleModal} className="header-link-icons">Contact Us</p>
         <div className='hamburger' onClick={handleHamburger}>
-          <Hamburger />
+          <Hamburger easing="ease-in" />
         </div>
         {
         hamburgerOpen?
