@@ -65,7 +65,6 @@
     height: 140px;
     width: 100%;
     display: flex;
-    z-index: 0;
 }
 
 .trio-images{
@@ -656,6 +655,5 @@
     height: auto;
     width: 100%;
     display: flex;
-    z-index: 0;
 }
 }
