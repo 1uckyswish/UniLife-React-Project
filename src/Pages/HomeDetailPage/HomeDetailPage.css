@@ -65,7 +65,7 @@
     height: 140px;
     width: 100%;
     display: flex;
-    z-index: -1;
+    z-index: 0;
 }
 
 .trio-images{
@@ -552,16 +552,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
-    .home-detail-card {
-        height: 100vh;
-        border: none;
-    }
 
-    .right-detail-container {
-        margin-bottom: 20px; /* Remove excessive margin */
-    }
-}
 
 @media screen and (max-width: 376px) {
     .description-container {
@@ -647,4 +638,24 @@
     .bedroom-row-chart {
         height: 50vh;
     }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .home-detail-card {
+        height: 100vh;
+        border: none;
+    }
+
+    .right-detail-container {
+        margin-bottom: 20px; /* Remove excessive margin */
+    }
+    #three-images-container{
+    margin-top: 11.5px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    z-index: 0;
+}
 }
