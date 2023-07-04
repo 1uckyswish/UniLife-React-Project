@@ -7,9 +7,11 @@
 }
 
 .slider-image{
-     filter: brightness(58%)blur(0.5px);
+     filter: brightness(0.8);
      width: 100%;
+     -webkit-filter: brightness(0.8);
 }
+
 .slider-header {
   position: absolute;
   color: var(--White-Text);

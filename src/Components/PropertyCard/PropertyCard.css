@@ -12,6 +12,8 @@
 .single-property-card img{
     width: 100%;
     border-radius: 24px 24px 0 0;
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
 }
 
 .single-property-card button {

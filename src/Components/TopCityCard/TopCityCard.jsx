@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TopCityCard({ topCity }) {
   const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  console.log(topCity)
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +34,7 @@ function TopCityCard({ topCity }) {
     backgroundPosition: 'center',
     width: '100%',
     height: '100%',
-    filter: 'blur(0.8px) brightness(0.8)', // Adjust brightness to make the background slightly darker
+    filter: 'brightness(0.8)', // Adjust brightness to make the background slightly darker
     transition: 'transform 0.3s', // Add transition for smooth effect
     transform: isHovered ? 'scale(1.3)' : 'scale(1)', // Apply the zoom effect when hovered
   };
@@ -71,6 +74,7 @@ function TopCityCard({ topCity }) {
       style={cardStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={()=>navigate(`CityDetails/${topCity?._id}`)}
     >
       <div style={imageStyle}></div>
       <div style={overlayStyle}></div>
