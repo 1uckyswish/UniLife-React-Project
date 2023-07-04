@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function TopCityCard({ topCity }) {
   const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log(topCity)
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,12 +67,12 @@ function TopCityCard({ topCity }) {
   };
 
   return (
-    <div
+    <Link
+      to={`CityDetails/${topCity?._id}`}
       className="grid-photo-item"
       style={cardStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={()=>navigate(`CityDetails/${topCity?._id}`)}
     >
       <div style={imageStyle}></div>
       <div style={overlayStyle}></div>
@@ -82,7 +80,7 @@ function TopCityCard({ topCity }) {
         <h2 style={headerStyle}>{topCity?.name}</h2>
         <p style={paragraphStyle}>{topCity?.property_count} Properties</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
