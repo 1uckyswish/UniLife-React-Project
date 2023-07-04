@@ -54,4 +54,8 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+
+#error-header{
+  z-index: -1;
+}
 }

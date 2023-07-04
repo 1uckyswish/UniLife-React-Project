@@ -56,7 +56,7 @@ function Footer() {
           <p>Privacy & Cookie Policies</p>
         </div>
         <div className="footer-copyright-container">
-          <p>2022</p>
+          <p>2023</p>
           <p>&copy;Unilife</p>
         </div>
       </div>
