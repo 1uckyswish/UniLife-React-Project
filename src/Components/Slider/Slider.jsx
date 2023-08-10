@@ -1,6 +1,6 @@
 import React from 'react';
 import './Slider.css';
-import Banner from '/src/assets/skyline-image.png';
+import Banner from '/src/assets/home-test-2.png';
 
 function Slider({data}) {
   const { title, description } = data;

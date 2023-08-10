@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Header.css';
-import { BsHouses } from 'react-icons/bs';
+import { BsHousesFill } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineMail } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -48,7 +48,7 @@ function Header() {
     <div className="header-container">
       <Link to="/">
         <div className="title-container">
-          <BsHouses className="title-icon" />
+          <BsHousesFill className="title-icon" />
           <h2>UniLife</h2>
         </div>
       </Link>
