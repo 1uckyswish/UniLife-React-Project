@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import "./CityInformation.css"
 import axios from 'axios';
-import StudentsImage from "/src/assets/friends.png"
+import StudentsImage from "/src/assets/grouped-students.png"
 
 function CityInformation({homeid}) {
     const [propertyInfo, setPropertyInfo] = useState([]);
