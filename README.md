@@ -26,11 +26,33 @@ Leverage React hooks to efficiently manage the state of individual components. T
 
 Integrate an API to fetch data from a remote server. The retrieved data can then be utilized to populate the application with dynamic content, enhancing its relevance and usefulness.
 
-## Getting Started
 
-Follow these steps to get the project up and running on your local machine:
+## Installation
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/your-project.git
-   cd your-project
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/1uckyswish/UniLife-React-Project.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd UniLife-React-Project
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+
+    ```bash
+    npm start
+    ```
+
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000)
