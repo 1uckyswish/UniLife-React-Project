@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function TopCityCard({ topCity }) {
+function TopCityCard({ topCity, special }) {
   const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -17,6 +17,7 @@ function TopCityCard({ topCity }) {
     };
   }, []);
 
+
   const cardStyle = {
     position: 'relative',
     width: windowWidth >= 600 ? '100%' : 'auto',
@@ -25,17 +26,20 @@ function TopCityCard({ topCity }) {
     overflow: 'hidden',
   };
 
-  const imageStyle = {
-    backgroundImage: `url(${topCity?.image_url})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    width: '100%',
-    height: '100%',
-    filter: 'brightness(0.8)', // Adjust brightness to make the background slightly darker
-    transition: 'transform 0.3s', // Add transition for smooth effect
-    transform: isHovered ? 'scale(1.3)' : 'scale(1)', // Apply the zoom effect when hovered
-  };
+const imageStyle = {
+  backgroundImage: topCity?._id === special?._id
+    ? `url('https://images.unsplash.com/photo-1630344353375-2f744504def3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
+    : `url(${topCity?.image_url})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  width: '100%',
+  height: '100%',
+  filter: 'brightness(0.8)',
+  transition: 'transform 0.3s',
+  transform: isHovered ? 'scale(1.3)' : 'scale(1)',
+};
+
 
   const overlayStyle = {
     position: 'absolute',
